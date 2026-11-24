@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="35" failures="0" errors="0" time="0.755890498">
+    <testsuite name="db/schema.test.ts" timestamp="2026-11-24T01:48:24.463Z" tests="7" failures="0" errors="0" skipped="0" time="0.030685205">
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; can be applied twice" time="0.009582396">
+        </testcase>
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; stores a run with its case results" time="0.00426574">
+        </testcase>
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; rejects an unknown run status" time="0.002265991">
+        </testcase>
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; rejects a run that finishes before it starts" time="0.002526796">
+        </testcase>
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; rejects a case result without a run" time="0.002095049">
+        </testcase>
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; rejects a negative duration" time="0.002209121">
+        </testcase>
+        <testcase classname="db/schema.test.ts" name="db/schema.sql &gt; removes case results with their run" time="0.001938857">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/app/App.test.tsx" timestamp="2026-11-24T01:48:24.471Z" tests="1" failures="0" errors="0" skipped="0" time="0.210710748">
+        <testcase classname="src/app/App.test.tsx" name="App &gt; renders the landing page from the site configuration" time="0.206409314">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/features/landing/components/LandingPage.test.tsx" timestamp="2026-11-24T01:48:24.472Z" tests="5" failures="0" errors="0" skipped="0" time="0.281928267">
+        <testcase classname="src/features/landing/components/LandingPage.test.tsx" name="LandingPage &gt; exposes a main landmark and a heading" time="0.238454384">
+        </testcase>
+        <testcase classname="src/features/landing/components/LandingPage.test.tsx" name="LandingPage &gt; shows the editable path" time="0.01247573">
+        </testcase>
+        <testcase classname="src/features/landing/components/LandingPage.test.tsx" name="LandingPage &gt; links to the configured deployment" time="0.011321926">
+        </testcase>
+        <testcase classname="src/features/landing/components/LandingPage.test.tsx" name="LandingPage &gt; treats configured text as data rather than markup" time="0.009519641">
+        </testcase>
+        <testcase classname="src/features/landing/components/LandingPage.test.tsx" name="LandingPage &gt; marks the logo as decorative" time="0.005823271">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/shared/components/ExternalLink.test.tsx" timestamp="2026-11-24T01:48:24.474Z" tests="3" failures="0" errors="0" skipped="0" time="0.199013801">
+        <testcase classname="src/shared/components/ExternalLink.test.tsx" name="ExternalLink &gt; isolates the opened page from this one" time="0.174454051">
+        </testcase>
+        <testcase classname="src/shared/components/ExternalLink.test.tsx" name="ExternalLink &gt; renders plain text for an unsafe URL" time="0.011746675">
+        </testcase>
+        <testcase classname="src/shared/components/ExternalLink.test.tsx" name="ExternalLink &gt; keeps the class name on the fallback" time="0.006999766">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/shared/security/safeExternalUrl.test.ts" timestamp="2026-11-24T01:48:24.475Z" tests="15" failures="0" errors="0" skipped="0" time="0.019719688">
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; accepts an https URL" time="0.005953889">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;javascript:alert(1)&quot;" time="0.000884568">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;JaVaScRiPt:alert(1)&quot;" time="0.00060289">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;data:text/html,&lt;script&gt;alert(1)&lt;/script&gt;&quot;" time="0.000660442">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;vbscript:msgbox(1)&quot;" time="0.000778098">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;file:///etc/passwd&quot;" time="0.000498878">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;http://example.com&quot;" time="0.000477186">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;//example.com&quot;" time="0.001907666">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;/relative/path&quot;" time="0.000789865">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;&quot;" time="0.000478175">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;not a url&quot;" time="0.000399987">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot; https://example.com&quot;" time="0.000191612">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;https://example.com\n&quot;" time="0.000161222">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;https://user:pass@example.com&quot;" time="0.000207717">
+        </testcase>
+        <testcase classname="src/shared/security/safeExternalUrl.test.ts" name="toSafeExternalUrl &gt; rejects &quot;https://user@example.com&quot;" time="0.000175722">
+        </testcase>
+    </testsuite>
+    <testsuite name="tooling/contentSecurityPolicy.test.ts" timestamp="2026-11-24T01:48:24.480Z" tests="4" failures="0" errors="0" skipped="0" time="0.013832789">
+        <testcase classname="tooling/contentSecurityPolicy.test.ts" name="contentSecurityPolicy &gt; denies by default" time="0.005955128">
+        </testcase>
+        <testcase classname="tooling/contentSecurityPolicy.test.ts" name="contentSecurityPolicy &gt; never allows inline or evaluated code" time="0.001203181">
+        </testcase>
+        <testcase classname="tooling/contentSecurityPolicy.test.ts" name="contentSecurityPolicy &gt; blocks base tag, form, and plugin abuse" time="0.000885704">
+        </testcase>
+        <testcase classname="tooling/contentSecurityPolicy.test.ts" name="contentSecurityPolicy &gt; applies only to production builds" time="0.000996968">
+        </testcase>
+    </testsuite>
+</testsuites>

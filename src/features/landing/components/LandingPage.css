@@ -1,0 +1,43 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #282c34;
+  color: #ffffff;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
+.landing__logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.landing__title {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.landing__link {
+  color: #61dafb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .landing__logo {
+    animation: landing-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes landing-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
