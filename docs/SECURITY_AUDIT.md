@@ -19,12 +19,14 @@ This is a self-review using automated tools and manual reading. It is not an ind
 | Hardcoded secrets | gitleaks reported no findings in the tree or local git refs | No issue found |
 | Supply chain | Version ranges and install scripts were allowed | Fixed: exact versions, scripts disabled, CI actions pinned |
 | CI permissions | No CI existed | Fixed: read-only token and no persisted credentials |
-| Third-party content | A full copy of an external article was published with the site | Partly fixed: see below |
+| Third-party content | A full copy of an external article was published with the site | Fixed: removed from the source, from the rewritten history and from the redeployed `gh-pages` branch |
 
 ## Open items
 
-1. **Third-party PDF.** It is removed from this branch but remains in git history and on the live `gh-pages` branch until the site is redeployed.
-2. **Response headers.** GitHub Pages does not allow custom headers. Protections that require them, such as `frame-ancestors`, are unavailable on this host.
+The third-party PDF item is resolved: on 2026-11-24 the history was rewritten and the site was redeployed from 1.0.0 as a single `gh-pages` commit. Copies served before that date may persist in caches outside this repository.
+
+
+1. **Response headers.** GitHub Pages does not allow custom headers. Protections that require them, such as `frame-ancestors`, are unavailable on this host.
 
 ## Reproducing the checks
 

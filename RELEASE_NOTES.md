@@ -1,23 +1,15 @@
-# Release Notes: v1.0.0
+# Release Notes: v1.0.1
 
-Version 1.0.0 modernizes this 2022 deployment sandbox. The page keeps its purpose, while the toolchain, structure, tests, and security controls are new.
+Documentation-only patch on top of 1.0.0. No code or behaviour changes.
 
-## Highlights
+## Changes
 
-- Vite, React 19, and strict TypeScript replace Create React App.
-- A deny-by-default Content Security Policy protects production builds.
-- Automated tests and CI cover the application, build policy, and optional schema.
+- The live site at https://juanmafx.github.io/frontSandBox-/ now serves the 1.0.0 build. The `gh-pages` branch was replaced with a single deployment commit, so the removed third-party PDF is no longer served or kept in that branch.
+- The repository history was rewritten on 2026-11-24 and keeps only the 2026 modernization commits.
+- The security audit marks the third-party PDF item as resolved.
 
 ## Upgrade notes
 
-- Use Node.js 24.15 or later.
-- Install with `npm ci --ignore-scripts`.
-- Use `npm run dev` instead of `npm start`.
-- The production output directory is still `build/`, and `npm run deploy` still publishes it.
-
-## Known limitations
-
-- The live site keeps serving the previous build, including the removed PDF, until a new deployment is made.
-- The removed PDF remains in git history.
+Unchanged from 1.0.0: use Node.js 24.15 or later, install with `npm ci --ignore-scripts`, run `npm run dev` for local work and `npm run deploy` to publish.
 
 See [CHANGELOG.md](CHANGELOG.md) for the full list of changes.

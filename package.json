@@ -1,6 +1,6 @@
 {
   "name": "fsandbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "A React and TypeScript sandbox for validating the build and GitHub Pages deployment path.",
   "homepage": "https://juanmafx.github.io/frontSandBox-/",
