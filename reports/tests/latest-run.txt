@@ -1,45 +1,46 @@
 
  RUN  v5.1.1 .
 
- ✓ db/schema.test.ts > db/schema.sql > can be applied twice 10ms
- ✓ db/schema.test.ts > db/schema.sql > stores a run with its case results 4ms
- ✓ db/schema.test.ts > db/schema.sql > rejects an unknown run status 2ms
- ✓ db/schema.test.ts > db/schema.sql > rejects a run that finishes before it starts 3ms
- ✓ db/schema.test.ts > db/schema.sql > rejects a case result without a run 2ms
- ✓ db/schema.test.ts > db/schema.sql > rejects a negative duration 2ms
- ✓ db/schema.test.ts > db/schema.sql > removes case results with their run 2ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > accepts an https URL 6ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "javascript:alert(1)" 1ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "JaVaScRiPt:alert(1)" 1ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "data:text/html,<script>alert(1)</script>" 1ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "vbscript:msgbox(1)" 1ms
+ ✓ db/schema.test.ts > db/schema.sql > can be applied twice 5ms
+ ✓ db/schema.test.ts > db/schema.sql > stores a run with its case results 3ms
+ ✓ db/schema.test.ts > db/schema.sql > rejects an unknown run status 1ms
+ ✓ db/schema.test.ts > db/schema.sql > rejects a run that finishes before it starts 2ms
+ ✓ db/schema.test.ts > db/schema.sql > rejects a case result without a run 1ms
+ ✓ db/schema.test.ts > db/schema.sql > enables foreign keys on the connection that applies it 2ms
+ ✓ db/schema.test.ts > db/schema.sql > rejects a negative duration 1ms
+ ✓ db/schema.test.ts > db/schema.sql > removes case results with their run 1ms
+ ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > denies by default 3ms
+ ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > never allows inline or evaluated code 2ms
+ ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > blocks base tag, form, and plugin abuse 0ms
+ ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > applies only to production builds 1ms
+ ✓ src/shared/components/ExternalLink.test.tsx > ExternalLink > isolates the opened page from this one 84ms
+ ✓ src/shared/components/ExternalLink.test.tsx > ExternalLink > renders plain text for an unsafe URL 6ms
+ ✓ src/shared/components/ExternalLink.test.tsx > ExternalLink > keeps the class name on the fallback 4ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > accepts an https URL 2ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "javascript:alert(1)" 0ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "JaVaScRiPt:alert(1)" 0ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "data:text/html,<script>alert(1)</script>" 0ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "vbscript:msgbox(1)" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "file:///etc/passwd" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "http://example.com" 0ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "//example.com" 2ms
- ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "/relative/path" 1ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "//example.com" 0ms
+ ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "/relative/path" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "not a url" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects " https://example.com" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "https://example.com\n" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "https://user:pass@example.com" 0ms
  ✓ src/shared/security/safeExternalUrl.test.ts > toSafeExternalUrl > rejects "https://user@example.com" 0ms
- ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > denies by default 6ms
- ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > never allows inline or evaluated code 1ms
- ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > blocks base tag, form, and plugin abuse 1ms
- ✓ tooling/contentSecurityPolicy.test.ts > contentSecurityPolicy > applies only to production builds 1ms
- ✓ src/shared/components/ExternalLink.test.tsx > ExternalLink > isolates the opened page from this one 174ms
- ✓ src/shared/components/ExternalLink.test.tsx > ExternalLink > renders plain text for an unsafe URL 12ms
- ✓ src/shared/components/ExternalLink.test.tsx > ExternalLink > keeps the class name on the fallback 7ms
- ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > exposes a main landmark and a heading 238ms
- ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > shows the editable path 12ms
- ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > links to the configured deployment 11ms
- ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > treats configured text as data rather than markup 10ms
- ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > marks the logo as decorative 6ms
- ✓ src/app/App.test.tsx > App > renders the landing page from the site configuration 206ms
+ ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > exposes a main landmark and a heading 75ms
+ ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > shows the editable path 5ms
+ ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > links to the configured deployment 5ms
+ ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > treats configured text as data rather than markup 4ms
+ ✓ src/features/landing/components/LandingPage.test.tsx > LandingPage > marks the logo as decorative 3ms
+ ✓ src/app/App.test.tsx > App > renders the landing page from the site configuration 90ms
 
  Test Files  6 passed (6)
-      Tests  35 passed (35)
-   Start at  22:48:21
-   Duration  2.49s (environment 72%, setup 17%, tests 7%, transform 2%, import 1%, worker 1%)
+      Tests  36 passed (36)
+   Start at  23:49:38
+   Duration  1.20s (environment 71%, setup 18%, tests 6%, transform 4%, import 1%, worker 1%)
 
 JUNIT report written to ./reports/tests/junit.xml

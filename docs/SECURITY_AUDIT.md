@@ -1,6 +1,6 @@
 # Security Audit
 
-**Date:** 2026-11-23. **Scope:** the working tree of version 1.0.0, its dependency lockfile, its CI workflow, and a pattern-based secret scan of all local git refs.
+**Date:** 2026-11-23. **Scope:** the working tree of version 1.0.0, its dependency lockfile, its CI workflow, and a gitleaks scan of all local git refs.
 
 This is a self-review using automated tools and manual reading. It is not an independent penetration test.
 
@@ -15,8 +15,8 @@ This is a self-review using automated tools and manual reading. It is not an ind
 | Unsafe evaluation | No `eval` or equivalent in source | Fixed in policy: blocked by lint rules and CSP |
 | Content Security Policy | None | Fixed: deny-by-default policy in production builds |
 | Injection and CSRF | No backend, forms, queries, or state-changing requests | Not applicable |
-| Password hashing | No credentials are handled | Not applicable |
-| Hardcoded secrets | No matches in the tree or local history | No issue found |
+| Authentication, 2FA, password hashing, and cryptography | No accounts, credentials, or cryptographic code | Not applicable |
+| Hardcoded secrets | gitleaks reported no findings in the tree or local git refs | No issue found |
 | Supply chain | Version ranges and install scripts were allowed | Fixed: exact versions, scripts disabled, CI actions pinned |
 | CI permissions | No CI existed | Fixed: read-only token and no persisted credentials |
 | Third-party content | A full copy of an external article was published with the site | Partly fixed: see below |
@@ -32,4 +32,5 @@ This is a self-review using automated tools and manual reading. It is not an ind
 npm ci --ignore-scripts
 npm audit
 npm run verify
+gitleaks git --redact --log-opts=--all .
 ```

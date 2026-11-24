@@ -75,7 +75,7 @@ The app reads no environment variables and needs no secrets.
 
 | Setting | Location |
 | --- | --- |
-| Author name, deployment URL, link label | `src/config/site.ts` |
+| Author name, deployment URL, link label, displayed file path | `src/config/site.ts` |
 | Deployment base path | `base` in `vite.config.ts` |
 | Content Security Policy | `tooling/contentSecurityPolicy.ts` |
 | npm install policy | `.npmrc` |
@@ -87,6 +87,8 @@ The app reads no environment variables and needs no secrets.
 ```bash
 sqlite3 test-runs.db < db/schema.sql
 ```
+
+The schema uses `STRICT` tables, which require SQLite 3.37 or later. SQLite enforces foreign keys per connection, so run `PRAGMA foreign_keys = ON;` after every connect. Without it, orphaned rows are accepted and cascading deletes do not run.
 
 ## Testing
 
@@ -106,7 +108,7 @@ See [SECURITY.md](SECURITY.md) and [docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.
 
 ## Credits and license
 
-- Originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The favicon and React logo assets come from that template.
+- Originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app), which is MIT licensed. `public/favicon.ico`, `public/logo192.png`, `public/logo512.png`, and `src/assets/logo.svg` are unmodified files from its template.
 - The deployment approach follows [How to deploy React App to GitHub Pages](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f), an article on DEV Community credited there to Ibrahim Ragab.
 
 Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE).

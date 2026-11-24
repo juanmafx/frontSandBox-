@@ -9,5 +9,5 @@ export const siteConfig: SiteConfig = {
   authorName: 'Juan Manuel Ramallo',
   deploymentUrl: 'https://juanmafx.github.io/frontSandBox-/',
   deploymentLabel: 'Open the deployed site',
-  editablePath: 'src/app/App.tsx',
+  editablePath: 'src/config/site.ts',
 };

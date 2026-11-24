@@ -1,4 +1,5 @@
 -- Optional SQLite schema for storing test run results. The application does not use it.
+-- SQLite enforces foreign keys per connection, so run PRAGMA foreign_keys = ON after every connect.
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS test_runs (

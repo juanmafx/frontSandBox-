@@ -1,7 +1,5 @@
 # Release Notes: v1.0.0
 
-**Status:** prepared, not tagged or published.
-
 Version 1.0.0 modernizes this 2022 deployment sandbox. The page keeps its purpose, while the toolchain, structure, tests, and security controls are new.
 
 ## Highlights

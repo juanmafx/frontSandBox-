@@ -41,6 +41,13 @@ describe('db/schema.sql', () => {
     expect(() => database.prepare(insertCase).run('missing', 'passed', 1)).toThrow();
   });
 
+  it('enables foreign keys on the connection that applies it', () => {
+    const connection = new DatabaseSync(':memory:', { enableForeignKeyConstraints: false });
+    connection.exec(schema);
+    expect(() => connection.prepare(insertCase).run('missing', 'passed', 1)).toThrow();
+    connection.close();
+  });
+
   it('rejects a negative duration', () => {
     database.prepare(insertRun).run('run-1', 'passed', '2026-01-01T00:00:01Z');
     expect(() => database.prepare(insertCase).run('run-1', 'passed', -1)).toThrow();
