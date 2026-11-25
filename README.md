@@ -1,4 +1,4 @@
-# frontSandBox-
+# react-pages-sandbox
 
 A small React and TypeScript sandbox for proving that a frontend change can move from a local edit through checks and a production build to GitHub Pages.
 
@@ -17,7 +17,7 @@ It provides a low-risk place to try a frontend toolchain and the GitHub Pages re
 - Renders a responsive, single-page landing screen with React 19.
 - Validates external links, rendering plain text instead of a link for anything other than a credential-free `https:` URL.
 - Adds a strict Content Security Policy to production builds.
-- Builds static files for the `/frontSandBox-/` base path.
+- Builds static files for the `/react-pages-sandbox/` base path.
 - Publishes the build to the `gh-pages` branch when `npm run deploy` is run manually.
 
 It has no backend, authentication, forms, analytics, or runtime data storage.
@@ -51,7 +51,7 @@ npm ci --ignore-scripts
 npm run dev
 ```
 
-Open the local URL that Vite prints, which includes the `/frontSandBox-/` base path.
+Open the local URL that Vite prints, which includes the `/react-pages-sandbox/` base path.
 
 ## Usage guide
 

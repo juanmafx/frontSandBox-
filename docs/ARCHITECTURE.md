@@ -2,7 +2,7 @@
 
 ## Overview
 
-frontSandBox- is a static single-page application. Vite compiles it to HTML, CSS, JavaScript, and images, and GitHub Pages serves those files. There is no server component, so the project is not split into `frontend/` and `backend/`.
+react-pages-sandbox is a static single-page application. Vite compiles it to HTML, CSS, JavaScript, and images, and GitHub Pages serves those files. There is no server component, so the project is not split into `frontend/` and `backend/`.
 
 ```text
 Source -> Lint, type check, test -> Vite build -> build/ -> gh-pages branch -> GitHub Pages

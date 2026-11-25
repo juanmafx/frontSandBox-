@@ -3,7 +3,7 @@ import { defineConfig } from 'vitest/config';
 import { contentSecurityPolicyPlugin } from './tooling/contentSecurityPolicy.ts';
 
 export default defineConfig({
-  base: '/frontSandBox-/',
+  base: '/react-pages-sandbox/',
   plugins: [react(), contentSecurityPolicyPlugin()],
   build: {
     outDir: 'build',

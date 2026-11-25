@@ -7,7 +7,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   authorName: 'Juan Manuel Ramallo',
-  deploymentUrl: 'https://juanmafx.github.io/frontSandBox-/',
+  deploymentUrl: 'https://juanmafx.github.io/react-pages-sandbox/',
   deploymentLabel: 'Open the deployed site',
   editablePath: 'src/config/site.ts',
 };
